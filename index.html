@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎸 تهنئة حسون🎸</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Cairo:wght@400;700&display=swap');
+
+    body {
+      background: linear-gradient(
+        135deg,
+        #ff7f50,
+        #1a1a1a,
+        #ff6b6b,
+        #2c2c2c,
+        #c0c0c0
+      );
+      background-size: 500% 500%;
+      animation: gradientFlow 5s ease infinite, shineEffect 4s linear infinite;
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      padding: 30px;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes shineEffect {
+      0% { filter: brightness(1); }
+      50% { filter: brightness(1.25); }
+      100% { filter: brightness(1); }
+    }
+
+    h1 {
+      font-family: 'Metal Mania', sans-serif;
+      font-size: 3.2em;
+      margin-top: 20px;
+      color: #ff8566;
+      text-shadow: 0 0 10px #ff6f61, 0 0 25px #ffb199;
+      animation: glow 2.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff6f61, 0 0 25px #ff8566; }
+      to   { text-shadow: 0 0 20px #ffd1c1, 0 0 35px #ffb199; }
+    }
+
+    p {
+      font-size: 1.4em;
+      margin-top: 15px;
+      color: #f0f0f0;
+      text-shadow: 0 0 4px #000;
+    }
+
+    img {
+      width: 260px;
+      margin-top: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255,111,97,0.7), 0 8px 25px rgba(0,0,0,0.5);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.07) rotate(-1deg);
+      box-shadow: 0 0 40px rgba(255,150,130,1), 0 12px 35px rgba(0,0,0,0.8);
+    }
+
+    button {
+      margin-top: 20px;
+      background: linear-gradient(145deg, #222, #111);
+      border: 2px solid #ff6f61;
+      color: #ffb199;
+      padding: 12px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.6), 0 0 12px #ff6f61 inset;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(145deg, #111, #222);
+      color: #ffd1c1;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.8), 0 0 18px #ff8566 inset;
+    }
+
+    .caption {
+      font-size: 1.2em;
+      margin-bottom: 12px;
+      color: #ffb199;
+      background-color: rgba(20,20,20,0.85);
+      padding: 10px 15px;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(255,111,97,0.4) inset;
+      transition: 0.3s ease;
+    }
+
+    .caption:hover {
+      color: #ffd1c1;
+      text-shadow: 0 0 8px #ff6f61;
+    }
+
+    .page {
+      display: none;
+      margin-top: 20px;
+      color: #f0f0f0;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(30,30,30,0.7);
+      box-shadow: 0 0 15px rgba(255,111,97,0.3);
+      animation: fadeIn 0.8s ease;
+    }
+
+    .heart {
+      position: fixed;
+      top: 0;
+      font-size: 24px;
+      animation: fall 4s linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    #surprise {
+      display: none;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hearts" id="hearts-container"></div>
+
+  <h1>🎸 ملحبا يا راس الميتل عيد ميلاد سعيد 🎸</h1>
+  <p>كل سنة وانتي بألف خير يارب 💀<br>كلنا حولك وندعمك وكل سنة وانتي بأبهى حلة لك 🤘</p>
+
+  <button onclick="togglePages()">🎁امتهاني خصيصيا لحسون</button>
+  <div class="pages-container" id="pages-container" style="display:none;">
+    <div class="pages-list" id="pages-list">
+      <button onclick="showPage(1)"> تهنئة معصفرة</button>
+      <button onclick="showPage(2)">تهنئة مولميئة</button>
+      <button onclick="showPage(3)">تهنئة مكوننة</button>
+      <button onclick="showPage(4)">تهنئة موبوبئة</button>
+      <button onclick="showPage(5)"> تهنئة محفصه</button>
+      <button onclick="showPage(6)">تهنئة موكورمة</button>
+      <button onclick="showPage(7)">تهنئة موجمللة</button>
+ <button onclick="showPage(8)">تهنئة موبوبة</button>
+      <button onclick="showPage(9)">تهنئة مونوننة</button>
+      <button onclick="showPage(10)">تهنئة موبوددة</button>
+    </div>
+
+    <div class="page" id="page1"><h2>العصفور 🥵</h2><p>يــوم مـيـلاد سـعيـد
+ نـتـمـنى هـاد العـام يـجـيك عام عامـر بالـضـحـك والـڤـايـب الـزويـن والـمـوسـيـقى اللـي كـتـعـجـبـك وفـرحـة 
+إن شـاء الـلـه تـوصـلي لـكـلشـي اللـي فــخـاطـرك
+نـحـبـوك كـا فـي مـال😍</p><button onclick="backToList()">العودة للقائمة</button></div>
+    <div class="page" id="page2"><h2>لمياء 😎</h2><p>المهم اء حسونه يا ريري سعيله اختي اش غنقوليك و منين غنبدا اعع تعرفت عليك بسباب صوديوم في رمضان اتوقع فاش كان دخلك للقروب ديال سبايدر فريند واااعع كانت افضل ايام ديال رمضان و كنتي كيوتتت بزاف وباقيا حتى لدابا تتمقي 
+جمال، كياته، صوتك كيوت، و حتى من لهجتك نااااضيهه، وحق رب معرفتش اش غنقوليك لكن يوما مميز بزاف حيت راااهو العام لي تولدتي فيه و جيتييي نتي من افضل صدفات الزين ورانا منسيناش عيد ميلادك اوفكورس و شكر لبودي حيت دار الموقع و تنبغيييوكك الزينننن واع رسمه معرفتش نديرها تتشبهك وو خليتك سمرة لكن معرفتش دمجتها مع شخصية توموكو حيتاش تتعجبك🫶🏼و عيد ميلاددد سعيدددد joyeux anniversaire 💞💞🫶🏼🫶🏼دخلتي دوكااا سن قانوني ولكن ستل باقا صغيرتييي الكيوت</p><button onclick="backToList()">العودة للقائمة</button></div>
+    <div class="page" id="page3"><h2>كون 🐇</h2><p>HAAPPYY BIRTTTTHDDDDDAYYY حسووون</p><button onclick="backToList()">العودة للقائمة</button></div>
+    <div class="page" id="page4"><h2>موب ☃️</h2><p>اولا حثثثوون كل عام وانتي بخير والله يطول بعمرك ويحفظك يارب والله ما يحرمك مننا يارب مبروك انك كملتي ال18 وصرتي اكسبايرد(امزح بلا سب) المهم ياخي أنا من أول مرة شفتك حسيتك رهيبة من بدايتها لكن ما حبيت اتكلم معك عشان لا ابين weird او شي زي كدا بس بعدها شفتك شخصية رهيبة جدا وما ندمت اني تعرفت عليك لانك اسطورية ورهيبة واحسن قصيمية عرفتها(ما شفت قصيمي بحياتي)المهم كل عام وانتي بالف ألف خير وربنا ما يحرمنا منك يارب</p><button onclick="backToList()">العودة للقائمة</button></div>
+    <div class="page" id="page5"><h2>حفصة 🌝</h2><p>في هذا اليوم ولدت قطعة من القمر، وابتسمت السماء لوجود فتاة تُدعى ريم🦋
+عيونك، يا ريم، ليست مجرّد ملامح، بل قصائد من ضوء، فيها سكون الغزال ودهشة المطر الأول 💫
+وصوتك ناعم كنسمة فجر تمسح على قلبٍ موجوع، يبعث الدفء في الروح 💗
+أما نضاراتك، فهي ليست زجاجا فقط، بل إطار لجمال هادئ، يحاكي الذكاء والرقيّ في كلّ نظرة✨
+عيد ميلادك ليس يوما عاديا ، بل مناسبة لنتذكر أن الجمال أحيانا يتجسد في شخص واحد... هو أنت🎂💗</p><button onclick="backToList()">العودة للقائمة</button></div>
+    <div class="page" id="page6"><h2>اكرمان 😛</h2><p>السلام عليكم ورحمة الله
+أو شي: شوفي الصراحة انا ما اعرف اعبر ولا قد كتبت رساله لاحد زي كذا ولاكن بحاول.
+لك يا يدتي حسون Happy birthday  المهم
+وابغا اقول كمان انتي احد اعز الأشخاص لي الي موجودين في القروب صح اني عرفتك قريب ولاكن يب شخصيتك حلوه صح انك متشائمه ولاكن استل عندك جوانب كثير حلوه منها مثل انك تعرفين ترسمين وذكية
+وأشياء ثانيه كثير وابغاكي كمان تعرفين انو كلنا نحبك ونهتم فيكي واتمنى اني دايما اشوفك سعيدة المهم واضح اني طولت في كلام. 
+Happy birthday to you يدتي حسون 
+المرسل:أكرم</p><button onclick="backToList()">العودة للقائمة</button></div>
+    <div class="page" id="page7"><h2>جميل 👅</h2><p>حسون!!! 
+كل عام وانت بخير ياللي متربي عللاصول فخامه💥
+عيد ميلادك جا ومعاه الضحك والفرحة والكيّيف اللي كتّعجبك
+كنتمنى ليك عام كله نجاحات وأيام ما تتنساش، وضحك من القلب ديما🙏🏻
+بقا ديما فرحان، ومع كل عام كتكبر كيزيدوا قوتك وروعتك😼🌷
+والعالم كامل يشوف طيبتك ووفائك وصداقتك
+يلا نحتافلو ونهدرّوها ضحك وفلة!!!! 🤘🏻✨</p><button onclick="backToList()">العودة للقائمة</button></div>
+<div class="page" id="page8"><h2>بوب 🙂‍↕️</h2><p>كل عام وانت بخير حسوننن شتحب تلعب ويانا🤩, احنا مو قريبين على بعد صح بس الحمدلله أنه هاض اول عيد ميلاد الك بكون معك فيه و ان شاء الله بضلني للي بعده و اكثر🤍 ، زي ما قال موب انتي رح اعملك عرض على الاونلي فانز تبعي بدل تخفيض🤗، عرض ليومين ببلاش و كلشي يجيك اول ب اول بس عشان شتحب تلعب ويانا😽، كلشي يتعلق فيك خرافي، رسمك، اسلوبك، كلامك، لهيك انت حسون المفضل تبعي و شتحب تلعب ويانا ، يا رب يكون عيد ميلاد سعيد الك ، صرتي كبيره بل عمر لكن بعدك صغيره ف عيونا,احبك حسون، و على الاغلب ما سألتك شتحب تلعب ويانا😼💕</p><button onclick="backToList()">العودة للقائمة</button></div>
+    <div class="page" id="page9"><h2>مونو 😖</h2><p>يوم ميلاد احلى سعيلة بالگروب ان شاء الله بخير و صحة و عافية و يبعد عنك كال البيدوز الا انا</p><button onclick="backToList()">العودة للقائمة</button></div>
+    <div class="page" id="page10"><h2>بودي</h2><p>هلو في البداية هابي بيرث داي تو يو نو بودي لايك يو 💝 ثانيا اتمنى لك الصحه و العافيه ع قلبس و التوفيق دايمن و ابدا اعتذر اني تاخرت علا الهدية لاكني حاولت اسوي الي علي و مش سويتها لحالي سحبت معي قوم كامل كانو يبغون يحتفلون برضو بس ما عرفو.
+
+نرجع للموضوع: عيد ميلاااد سعييييييدد اخيرااا صرتي ١٨ و الحين صرتي بالغه ورح تشربين امبيرة و امويسكي ورح تقدرين تطلعين رخصه سواقه ورح تفلينها للاسف معي توحد و ضعف اجتماعي ماني حق هدايا و تهنئتات لاكني مارح اضيع الفرصة الي معي ورح اقولك عيد سعيد وكل سنة وانتي طيبة كان ودي ارسلها بدري بس للافس تاخرت و اعتذر مره ثانيه علا تأخيرها وكان نفسي احط اغنيه ميتل تقول هابي بيرث داي تو يو بس معي ضعف بالميتل و اعتذر مره ثالثة لاني ما سويتها حاولت احتفل بعيد ميلادك حاولت اخلص الموقع بسرعه وتكون هدية تليق بمكانس تستاهلين احسن بس يعني حاولت أبدع + عيد ميلادك بعد 9/11 بيومين ديييم يعني احتفل ب 9/11 و اسوي هدية لك بعدها ب يوم عيد ميلادك رح يكون ذكرى مارح انساها😭 اسف اني طولت كلام بباي💝💖</p><button onclick="backToList()">العودة للقائمة</button></div>
+  </div>  
+  <img src="https://i.postimg.cc/ZKbv8sH1/IMG-20250913-230241-858.jpg" alt="هدية ثهد😋" />
+
+  <br>
+  <button onclick="showSurprise()">وقت الهدايا تبعس</button>
+
+<div class="surprise-image" id="surprise">
+    <div class="images-row">
+      <div class="image-box">
+        <p class="caption">رسمت كوني 😖</p>
+        <img src="https://i.postimg.cc/wM3F3x1k/IMG-20250913-225335-268.jpg" alt="هدية(2) جماعية" />
+      </div>
+      <div class="image-box">
+        <p class="caption">رسمت لمياء😭</p>
+        <img src="https://i.postimg.cc/xqDHY9M8/IMG-20250913-225757-272.jpg" alt="هدية(3)" />
+      </div>
+      <div class="image-box">
+        <p class="caption">رسمه جملول طلع يعرف يرسم 😉</p>
+        <img src="https://i.postimg.cc/fyr3TDdm/IMG-20250913-230502-329.jpg" alt="هدية(4)" />
+      </div>
+      <div class="image-box">
+        <p class="caption">رسمت تركي رهيبة asf😖</p>
+        <img src="https://i.postimg.cc/Gpqw8QLJ/IMG-20250914-000409-694.jpg" alt="هدية(5)" />
+      </div>
+    </div>
+
+    <div class="video-box">
+      <p class="video-caption">فيد خاص من موب ل حسون اتمنى يعجبس 😖</p>
+      <video controls>
+        <source src="hasoon.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-box">
+      <p class="video-caption">فيد سواه تركي 😍😍 عشانس يارب يعجبش</p>
+      <video controls>
+        <source src="hasoon2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script>
+    const heartEmojis = ['💀', '🤘', '🔥', '🩸'];
+    const heartsContainer = document.getElementById('hearts-container');
+
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = '-50px';
+      heart.style.fontSize = (20 + Math.random() * 20) + 'px';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }, 300);
+
+    function showSurprise() {
+      const surprise = document.getElementById("surprise");
+      surprise.style.display = "block";
+      surprise.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function togglePages() {
+      const container = document.getElementById('pages-container');
+      container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function showPage(num) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.style.display = 'none');
+      document.getElementById('page' + num).style.display = 'block';
+      document.getElementById('pages-list').scrollIntoView({ behavior: "smooth" });
+    }
+
+    function backToList() {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.style.display = 'none');
+      document.getElementById('pages-container').scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
